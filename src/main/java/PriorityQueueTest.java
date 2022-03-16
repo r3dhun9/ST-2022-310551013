@@ -11,12 +11,21 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PriorityQueueTest {
     static Stream<Arguments> streamProvider() {
+//        return Stream.of(
+//                Arguments.of(new int[] {5, 3, 2, 6}, new int[] {2, 3, 5, 6}),
+//                Arguments.of(new int[] {-5, -3, -2, -6}, new int[] {-6, -5, -3, -2}),
+//                Arguments.of(new int[] {-9, 6, -1, 4}, new int[] {-9, -1, 4, 6}),
+//                Arguments.of(new int[] {10, -1, -2, 6, 2}, new int[] {-2, -1, 2, 6, 10}),
+//                Arguments.of(new int[] {9, 7, 2, 1, 8}, new int[] {1, 2, 7, 8, 9})
+//        );
+
+        //Failed
         return Stream.of(
-                Arguments.of(new int[] {5, 3, 2, 6}, new int[] {2, 3, 5, 6}),
-                Arguments.of(new int[] {-5, -3, -2, -6}, new int[] {-6, -5, -3, -2}),
-                Arguments.of(new int[] {-9, 6, -1, 4}, new int[] {-9, -1, 4, 6}),
-                Arguments.of(new int[] {10, -1, -2, 6, 2}, new int[] {-2, -1, 2, 6, 10}),
-                Arguments.of(new int[] {9, 7, 2, 1, 8}, new int[] {1, 2, 7, 8, 9})
+                Arguments.of(new int[] {5, 3, 2, 6}, new int[] {3, 2, 5, 6}),
+                Arguments.of(new int[] {-5, -3, -2, -6}, new int[] {-5, -6, -3, -2}),
+                Arguments.of(new int[] {-9, 6, -1, 4}, new int[] {-1, -9, 4, 6}),
+                Arguments.of(new int[] {10, -1, -2, 6, 2}, new int[] {-1, -2, 2, 6, 10}),
+                Arguments.of(new int[] {9, 7, 2, 1, 8}, new int[] {2, 1, 7, 8, 9})
         );
     }
 
